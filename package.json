@@ -1,5 +1,6 @@
 {
   "name": "hotel-app",
+  "author": "kurt reynolds",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
