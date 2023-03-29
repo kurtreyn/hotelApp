@@ -1,6 +1,4 @@
 /* You can add global styles to this file, and also import other style files */
-
-// ------------- Flexbox -------------
 .flex-row {
   display: flex;
   flex-direction: row;
@@ -17,4 +15,4 @@
 
 .fc-center {
   align-items: center;
-}
+}/*# sourceMappingURL=styles.css.map */

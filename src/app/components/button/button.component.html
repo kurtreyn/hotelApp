@@ -1,0 +1,8 @@
+<button
+  location=""
+  class="btn-1"
+  [ngClass]="{ 'btn-1': location === 'one', 'btn-2': location === 'two' }"
+  (click)="onClick()"
+>
+  {{ text }}
+</button>
