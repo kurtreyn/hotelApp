@@ -4,13 +4,13 @@
   justify-content: center;
   z-index: 2;
   position: absolute;
-  bottom: 3px;
+  bottom: 0px;
   left: 0;
   right: 0;
   margin-left: auto;
   margin-right: auto;
   width: 100%; /* Need a specific value to work */
-  background-color: rgba(255, 255, 255, 0.45);
+  background-color: rgba(255, 255, 255, 0.3);
   border-radius: 5px;
   padding: 1rem 2rem;
 }
@@ -18,7 +18,7 @@
 @supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
   .nav {
     -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(5px);
     background-color: rgba(255, 255, 255, 0.3);
   }
   .warning {
