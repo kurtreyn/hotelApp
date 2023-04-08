@@ -2,7 +2,12 @@
   <div class="login-card-header">
     <h1>{{ formTitle }}</h1>
   </div>
-  <form [formGroup]="form" formType="" class="login-card-form">
+  <form
+    #loginSignupForm="ngForm"
+    [formGroup]="form"
+    formType=""
+    class="login-card-form"
+  >
     <div class="form-item">
       <input
         type="text"
@@ -21,6 +26,10 @@
       />
     </div>
 
-    <app-button location="two" text="Submit" (btnClick)="onSave()"></app-button>
+    <app-button
+      location="two"
+      text="Submit"
+      (btnClick)="handleSubmit()"
+    ></app-button>
   </form>
 </div>

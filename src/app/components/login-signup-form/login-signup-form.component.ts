@@ -1,7 +1,6 @@
 import { Component, Input, Output, OnInit, EventEmitter } from '@angular/core';
 import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms';
 
-// import { USERS } from '../../usersInterface';
 
 @Component({
   selector: 'app-login-signup-form',
@@ -28,9 +27,11 @@ export class LoginSignupFormComponent implements OnInit {
     });
   }
 
+  public resetForm() {
+    this.form.reset();
+  }
 
-
-  onSave() {
+  handleSubmit() {
     this.form_type.emit(this.form.value);
   }
 }

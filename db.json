@@ -11,11 +11,6 @@
       "id": 2
     },
     {
-      "email": "harry@email.com",
-      "password": "yonkersNy",
-      "id": 3
-    },
-    {
       "email": "jon@email.com",
       "password": "LosAngeles",
       "id": 4
@@ -24,6 +19,16 @@
       "email": "charlie@email.com",
       "password": "password12",
       "id": 5
+    },
+    {
+      "email": "brian@email.com",
+      "password": "password",
+      "id": 6
+    },
+    {
+      "email": "scarlett@email.com",
+      "password": "password",
+      "id": 7
     }
   ]
 }

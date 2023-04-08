@@ -1,10 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, OnChanges } from '@angular/core';
 import { ApiService } from 'src/app/services/api.service';
 import { Router } from '@angular/router';
-import { Observable } from 'rxjs';
+// import { Observable } from 'rxjs';
 
 import { USERS } from '../../usersInterface';
 import { NgForm } from '@angular/forms';
+import { LoginSignupFormComponent } from '../login-signup-form/login-signup-form.component';
+
 
 @Component({
   selector: 'app-signup',
@@ -15,8 +17,14 @@ export class SignupComponent {
   log!: any;
   public error: any = [];
   public success = null;
+  // @ViewChild('loginSignupForm') form!: NgForm;
+  @ViewChild('loginSignupForm') loginSignupForm!: LoginSignupFormComponent;
+
+
 
   constructor(private service: ApiService, private router: Router) { }
+
+
 
 
   onSubmit(user: USERS) {
@@ -26,16 +34,20 @@ export class SignupComponent {
       error => this.handleError(error)
     )
   }
+
   handleResponse(data: any) {
+    console.log('child_component: loginSignupForm ', this.loginSignupForm)
     this.success = data.message;
+    this.loginSignupForm.resetForm();
     alert('Signup successful');
-    // this.form.reset();
     this.router.navigate(['login']);
   }
+
   handleError(error: any) {
     this.error = error.error.errors;
     alert('Signup failed');
   }
+
 
 
 }
