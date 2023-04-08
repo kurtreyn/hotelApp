@@ -29,6 +29,16 @@
       "email": "scarlett@email.com",
       "password": "password",
       "id": 7
+    },
+    {
+      "email": "o@email.com",
+      "password": "password",
+      "id": 8
+    },
+    {
+      "email": "p@email.com",
+      "password": "password",
+      "id": 9
     }
   ]
 }

@@ -2,12 +2,7 @@
   <div class="login-card-header">
     <h1>{{ formTitle }}</h1>
   </div>
-  <form
-    #loginSignupForm="ngForm"
-    [formGroup]="form"
-    formType=""
-    class="login-card-form"
-  >
+  <form [formGroup]="form" formType="" class="login-card-form">
     <div class="form-item">
       <input
         type="text"
