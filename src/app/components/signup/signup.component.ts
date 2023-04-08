@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class SignupComponent {
 
+  onSubmit(event: any) {
+    console.log('event: ', event)
+  }
 }

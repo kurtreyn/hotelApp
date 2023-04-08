@@ -11,24 +11,27 @@ import { Router } from '@angular/router';
 export class LoginSignupFormComponent implements OnInit {
   @Input() formType: string = '';
   @Input() formTitle?: string;
-  @Output() form_type = new EventEmitter<string>();
+  @Output() form_type = new EventEmitter<object>();
 
   constructor(private http: HttpClient, private formBuilder: FormBuilder, private router: Router) { }
 
   form!: FormGroup;
 
-  // ngOnInit() {
-  //   this.form = new FormGroup({
-  //     email: new FormControl(null, [Validators.required, Validators.email]),
-  //     password: new FormControl(null, [Validators.required, Validators.minLength(6)])
-  //   });
-  // }
-
   ngOnInit() {
+    this.createForm();
+  }
+
+  createForm() {
+    console.log('creating form')
     this.form = this.formBuilder.group({
-      email: ['', [Validators.required, Validators.email]],
-      password: ['', [Validators.required, Validators.minLength(6)]]
+      email: new FormControl('', [Validators.required, Validators.email]),
+      password: new FormControl('', [Validators.required, Validators.minLength(6)])
     });
+  }
+
+  onSave() {
+    console.log('onSave', this.form.value)
+    this.form_type.emit(this.form.value);
   }
 
   signUp() {
@@ -43,14 +46,6 @@ export class LoginSignupFormComponent implements OnInit {
     })
   }
 
-  onSubmit() {
-    console.log('formType: ', this.formType);
-    if (this.formType === 'login') {
-      this.signUp()
-    } else if (this.formType === 'signup') {
-      console.log('signup');
-    }
-    console.log(this.form)
-  }
+
 
 }
