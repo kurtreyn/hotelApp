@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 // import { Observable } from 'rxjs';
 
 import { USERS } from '../../usersInterface';
-import { NgForm } from '@angular/forms';
+// import { NgForm } from '@angular/forms';
 import { LoginSignupFormComponent } from '../login-signup-form/login-signup-form.component';
 
 
@@ -17,7 +17,6 @@ export class SignupComponent {
   log!: any;
   public error: any = [];
   public success = null;
-  // @ViewChild('loginSignupForm') form!: NgForm;
   @ViewChild('loginSignupForm') loginSignupForm!: LoginSignupFormComponent;
 
 
