@@ -1,4 +1,4 @@
-export interface Hero {
+export interface ROOMS {
     id: number;
     name: string;
     price: number;

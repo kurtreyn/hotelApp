@@ -1,16 +1,26 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { FormGroup } from '@angular/forms';
+import { Observable } from 'rxjs';
+import { USERS } from '../usersInterface';
+
+const httpOptions = {
+  headers: new HttpHeaders({
+    'Content-Type': 'application/json'
+  })
+}
 
 @Injectable({
   providedIn: 'root'
 })
 export class ApiService {
-  url: string = 'http://localhost:3000/users';
-
+  users_url: string = 'http://localhost:3000/users';
+  form!: FormGroup;
 
   constructor(private http: HttpClient) { }
 
-  getAllUsers() {
-    return this.http.get(this.url)
+  signUp(user: USERS): Observable<USERS> {
+    return this.http.post<USERS>(this.users_url, user, httpOptions)
   }
+
 }

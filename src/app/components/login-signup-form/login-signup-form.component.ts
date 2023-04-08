@@ -1,7 +1,7 @@
 import { Component, Input, Output, OnInit, EventEmitter } from '@angular/core';
 import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms';
-import { HttpClient } from '@angular/common/http';
-import { Router } from '@angular/router';
+
+// import { USERS } from '../../usersInterface';
 
 @Component({
   selector: 'app-login-signup-form',
@@ -11,9 +11,9 @@ import { Router } from '@angular/router';
 export class LoginSignupFormComponent implements OnInit {
   @Input() formType: string = '';
   @Input() formTitle?: string;
-  @Output() form_type = new EventEmitter<object>();
+  @Output() form_type = new EventEmitter<any>()
 
-  constructor(private http: HttpClient, private formBuilder: FormBuilder, private router: Router) { }
+  constructor(private formBuilder: FormBuilder) { }
 
   form!: FormGroup;
 
@@ -22,30 +22,15 @@ export class LoginSignupFormComponent implements OnInit {
   }
 
   createForm() {
-    console.log('creating form')
     this.form = this.formBuilder.group({
       email: new FormControl('', [Validators.required, Validators.email]),
       password: new FormControl('', [Validators.required, Validators.minLength(6)])
     });
   }
 
+
+
   onSave() {
-    console.log('onSave', this.form.value)
     this.form_type.emit(this.form.value);
   }
-
-  signUp() {
-    this.http.post<any>('http://localhost:3000/signupUsers', this.form.value).subscribe(res => {
-      console.log('res: ', res)
-      alert('Signup successful');
-      this.form.reset()
-      this.router.navigate(['login']);
-    }, err => {
-      alert('Signup failed');
-      this.form.reset()
-    })
-  }
-
-
-
 }

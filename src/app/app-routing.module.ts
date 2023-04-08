@@ -5,7 +5,7 @@ import { RoomsComponent } from './components/rooms/rooms.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
-import { DataTableComponent } from './components/data-table/data-table.component';
+
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -13,7 +13,6 @@ const routes: Routes = [
   { path: 'contact', component: ContactComponent },
   { path: 'login', component: LoginComponent },
   { path: 'signup', component: SignupComponent },
-  { path: 'data-table', component: DataTableComponent },
 ];
 
 @NgModule({

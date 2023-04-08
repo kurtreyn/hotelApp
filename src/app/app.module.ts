@@ -14,7 +14,6 @@ import { RoomComponent } from './components/rooms/room/room.component';
 import { HomeComponent } from './components/home/home.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { DataTableComponent } from './components/data-table/data-table.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { LoginComponent } from './components/login/login.component';
 import { LoginSignupFormComponent } from './components/login-signup-form/login-signup-form.component';
@@ -29,7 +28,6 @@ import { LoginSignupFormComponent } from './components/login-signup-form/login-s
     RoomComponent,
     HomeComponent,
     ContactComponent,
-    DataTableComponent,
     SignupComponent,
     LoginComponent,
     LoginSignupFormComponent
