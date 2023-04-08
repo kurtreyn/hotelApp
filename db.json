@@ -1,0 +1,44 @@
+{
+  "users": [
+    {
+      "email": "kurt@email.com",
+      "password": "password",
+      "id": 1
+    },
+    {
+      "email": "bob@email.com",
+      "password": "password123",
+      "id": 2
+    },
+    {
+      "email": "jon@email.com",
+      "password": "LosAngeles",
+      "id": 4
+    },
+    {
+      "email": "charlie@email.com",
+      "password": "password12",
+      "id": 5
+    },
+    {
+      "email": "brian@email.com",
+      "password": "password",
+      "id": 6
+    },
+    {
+      "email": "scarlett@email.com",
+      "password": "password",
+      "id": 7
+    },
+    {
+      "email": "o@email.com",
+      "password": "password",
+      "id": 8
+    },
+    {
+      "email": "p@email.com",
+      "password": "password",
+      "id": 9
+    }
+  ]
+}
