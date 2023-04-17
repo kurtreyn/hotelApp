@@ -4,41 +4,29 @@
       "email": "kurt@email.com",
       "password": "password",
       "id": 1
+    }
+  ],
+  "rooms": [
+    {
+      "id": 1,
+      "name": "Room 1",
+      "price": 150,
+      "description": "Room 1 description",
+      "image": "../../assets/images/bali-rm01.jpeg"
     },
     {
-      "email": "bob@email.com",
-      "password": "password123",
-      "id": 2
+      "id": 2,
+      "name": "Room 2",
+      "price": 145,
+      "description": "Room 2 description",
+      "image": "../../assets/images/bali-rm02.jpeg"
     },
     {
-      "email": "jon@email.com",
-      "password": "LosAngeles",
-      "id": 4
-    },
-    {
-      "email": "charlie@email.com",
-      "password": "password12",
-      "id": 5
-    },
-    {
-      "email": "brian@email.com",
-      "password": "password",
-      "id": 6
-    },
-    {
-      "email": "scarlett@email.com",
-      "password": "password",
-      "id": 7
-    },
-    {
-      "email": "o@email.com",
-      "password": "password",
-      "id": 8
-    },
-    {
-      "email": "p@email.com",
-      "password": "password",
-      "id": 9
+      "id": 3,
+      "name": "Room 3",
+      "price": 210,
+      "description": "Room 3 description",
+      "image": "../../assets/images/bali-rm03.jpeg"
     }
   ]
 }

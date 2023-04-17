@@ -1,3 +1,18 @@
 <div class="rooms-container">
-  <p>Rooms Component</p>
+  <table class="rooms-table">
+    <tr class="header-row">
+      <th class="table-header"></th>
+      <th class="table-header">Room Name</th>
+      <th class="table-header">Room Description</th>
+      <th class="table-header">Room Price</th>
+    </tr>
+    <tr *ngFor="let room of rooms" class="table-body-row">
+      <td class="cell image-cell">
+        <img src="{{ room.image }}" alt="room image" class="room-image" />
+      </td>
+      <td class="cell">{{ room.name }}</td>
+      <td class="cell">{{ room.description }}</td>
+      <td class="cell">{{ room.price }}</td>
+    </tr>
+  </table>
 </div>
